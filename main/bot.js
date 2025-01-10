@@ -109,11 +109,11 @@ bot.on('callback_query', async (query) => {
                     reply_markup: {
                         inline_keyboard: [
                             [
-                                { text: '💸 Enter Withdraw Amount', callback_data: 'withdraw_amount' },
-                                { text: '💼 Withdraw Wallet', callback_data: 'withdraw_wallet' }
+                                { text: '💸 Enter Withdraw Amount', callback_data: 'withdrawamount' },
+                                { text: '💼 Withdraw Wallet', callback_data: 'withdrawwallet' }
                             ],
                             [
-                                { text: '💰 Sell X SOL Amount', callback_data: 'sell_sol' },
+                                { text: '💰 Sell X SOL Amount', callback_data: 'sellsol' },
                                 { text: '🔙 Back', callback_data: 'menu_back' }
                             ]
                         ]
@@ -132,7 +132,7 @@ bot.on('callback_query', async (query) => {
                 );
                 break;
 
-            case 'withdraw_wallet':
+            case 'withdrawwallet':
                 sessionManager.setUserState(chatId, { 
                     ...userState, 
                     step: 'AWAITING_WITHDRAW_WALLET' 
@@ -145,7 +145,7 @@ bot.on('callback_query', async (query) => {
                 );
                 break;
 
-            case 'sell_sol':
+            case 'sellsol':
                 sessionManager.setUserState(chatId, { 
                     ...userState, 
                     step: 'AWAITING_SELL_AMOUNT' 
