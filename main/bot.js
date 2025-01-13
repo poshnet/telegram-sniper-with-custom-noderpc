@@ -35,8 +35,8 @@ bot.onText(/\/start|\/refresh/, async (msg) => {
     
     bot.sendMessage(
         chatId, 
-        '🤖 *Trading Bot*',
-        { ...menuOptions, parse_mode: 'Markdown' }
+        'Instant Sniper by lucky ▄︻デ══━一 Private Node Version' ,
+        { ...menuOptions, parse_mode: 'MarkdownV2' }
     );
 });
 
@@ -94,7 +94,7 @@ bot.on('callback_query', async (query) => {
                 };
                 
                 bot.editMessageText(
-                    '🤖 *Trading Bot*',
+                    'Instant Sniper by lucky ▄︻デ══━一 Private Node Version',
                     {
                         chat_id: chatId,
                         message_id: query.message.message_id,
